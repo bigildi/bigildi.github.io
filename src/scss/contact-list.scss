@@ -1,0 +1,44 @@
+.contact-nr {
+    margin: .625rem;
+    font-size: .75rem;
+    text-align: right;
+}
+
+.contact-list {
+
+    &-item {
+        position: relative;
+        top: 0;
+        border: none;
+        margin-bottom: .625rem;
+        padding: 0;
+        background: $bg-grey-dark;
+        box-shadow: 0 8px 6px -6px black;
+        transition: top .5s;
+
+        a {
+            position: relative;
+            display: block;
+            padding: .5rem .5rem .5rem 3.5rem;
+            color: $fc;
+            transition: color .5s;
+
+            .contact-avt {
+                position: absolute;
+                left: .5rem; top: 0;
+                width: auto;
+                height: 100%;
+                background: transparent no-repeat center / contain;
+            }
+        }
+
+        &:hover {
+            top: 2px;
+
+            a {
+                color: $purple;
+                text-decoration: none;
+            }
+        }
+    }
+}

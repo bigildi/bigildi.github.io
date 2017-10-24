@@ -1,0 +1,21 @@
+.contact-form {
+
+    .form-line {
+        margin-bottom: 2rem;
+
+        @include cool-effect(focus);
+    }
+
+    label {
+        font-size:  .825rem;
+        color: $grey;
+    }
+
+    input {
+        line-height: 1.875rem;
+    }
+
+    textarea{
+        resize: none;
+    }
+}

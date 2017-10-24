@@ -1,0 +1,8 @@
+.contact-search {
+    @include cool-effect(focus);
+
+    input {
+        background: transparent url('../img/svg/magnifying-glass.svg') center right .5rem no-repeat / 1rem;
+    }
+
+}

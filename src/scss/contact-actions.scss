@@ -1,0 +1,15 @@
+.contact-actions {
+    margin-top: 1rem;
+    text-align: right;
+
+    div {
+        display: inline-block;
+
+        @include cool-effect(hover);
+    }
+
+    a {
+        display: inline-block;
+        padding: .625rem;
+    }
+}

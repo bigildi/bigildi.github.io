@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Contact List</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+        <link rel="stylesheet" href="dist/css/style.css" />
+        <script src="//code.angularjs.org/1.2.4/angular.js"></script>
+        <script src="//code.angularjs.org/1.2.1/angular-resource.js"></script>
+        <script src="//code.angularjs.org/1.2.0-rc.2/angular-route.js"></script>
+        <script src="dist/scripts/app.js"></script>
+        <script src="dist/scripts/services.js"></script>
+        <script src="dist/scripts/controllers.js"></script>
+        <script src="dist/scripts/directives.js"></script>
+    </head>
+    <body>
+        <div class="global-wrapper" ng-app="contactApp">
+            <!-- nav  -->
+            <nav ng-controller="navCtrl">
+                <ul class="nav nav-pills justify-content-end">
+                    <li ng-repeat="navLink in nav.navItems" class="nav-item {{navLink}}" ng-class="{active : $index === nav.selectedIndex}">
+                        <a class="text-center nav-link cool-effect-trigger" ng-click="nav.navClick($index)" ng-href="#/{{navLink}}">{{navLink}}</a>
+                        <span class="cool-effect-line"></span>
+                    </li>
+                </ul>
+            </nav>
+            <div class="container">
+                <div class="row panel panel-primary" ng-controller="homeCtrl">
+                    <!-- contact list -->
+                    <div class="col-4 panel-body contact-list">
+                        <ul class="list-group">
+                            <div class="contact-search">
+                                <input class="cool-effect-trigger" placeholder="Find Contacts" type="text" ng-model="searchText">
+                                <span class="cool-effect-line"></span>
+                            </div>
+                            <p class="contact-nr">{{filtered.length}} contact(s)</p>
+                            <contact class="list-group-item" ng-repeat="contact in filtered = (contacts | orderBy: 'last_name' | filter: searchText) "></contact>
+                        </ul>
+                    </div>
+                    <!-- ng-view below -->
+                    <div class="col-8 contact-data">
+                        <div class="list-group panel-body">
+                            <div ng-view></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
+

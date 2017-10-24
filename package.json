@@ -1,0 +1,24 @@
+{
+  "name": "contact-list",
+  "version": "1.0.0",
+  "description": "Contact list for Voda with Angular",
+  "main": "app.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "''"
+  },
+  "author": "bigildi",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^7.1.5",
+    "gulp": "^3.9.1",
+    "gulp-imagemin": "^3.4.0",
+    "gulp-postcss": "^7.0.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "jasmine": "^2.8.0"
+  }
+}

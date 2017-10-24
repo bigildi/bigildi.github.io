@@ -1,0 +1,29 @@
+<div class="list-group-item contact-info">
+    <div class="contact-img">
+        <img ng-src="{{currentContact.avatar}}"\>
+    </div>
+    <h4 class="contact-name">{{currentContact.first_name}} <span class="bold">{{currentContact.last_name}}</span></h4>
+
+    <dl>
+        <dt>Gender</dt>
+        <dd>{{currentContact.gender}}</dd>
+
+        <dt>Email</dt>
+        <dd><a ng-href="{{currentContact.email}}">{{currentContact.email}}</a></dd>
+
+        <dt>Slogan</dt>
+        <dd><em class="contact-slogan">"{{currentContact.slogan}}"</em></dd>
+    </dl>
+
+
+    <div class="contact-actions">
+        <div>
+            <a class="cool-effect-trigger" ng-href="#/edit/{{contacts.indexOf(currentContact)}}">Edit</a>
+            <span class="cool-effect-line"></span>
+        </div>
+        <div>
+            <a class="cool-effect-trigger" href="#/" ng-click="removeContact(currentContact)">Remove</a>
+            <span class="cool-effect-line"></span>
+        </div>
+    </div>
+</div>

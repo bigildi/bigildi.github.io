@@ -1,0 +1,74 @@
+@import 'variables.scss',
+        'mixins.scss';
+
+@import 'nav.scss';
+
+@import 'contact-info.scss',
+        'contact-list.scss',
+        'contact-search',
+        'contact-data',
+        'contact-actions',
+        'contact-form';
+
+
+body {
+    background: $bg-grey-light;
+    color: $fc;
+    font-family: $ff;
+}
+
+a {
+    color: $lc;
+}
+
+button,
+a,
+input,
+textarea {
+    outline: none;
+}
+
+.container {
+    padding-bottom: 2rem;
+}
+
+input,
+textarea {
+    border: 0;
+    border-bottom: 1px solid rgba(141,67,173,0.6);
+    padding-left: .625rem;
+    line-height: 1.875rem;
+    width: 100%;
+}
+
+dl {
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0;
+}
+dt,
+dd {
+    box-sizing: border-box;
+    margin: 0 2px 1px;
+    padding: 0.25rem 0.5rem;
+    word-wrap: break-word;
+}
+dt {
+    display: flex;
+    width: 7rem;
+    align-items: center;
+    font-weight: normal;
+    font-size: .75rem;
+}
+dd {
+    width: calc(100% - 7rem - .5rem);
+}
+
+button {
+    border: none;
+    padding: 0 .625rem;
+    background: transparent;
+    color: $lc;
+    line-height: 1.5rem;
+}

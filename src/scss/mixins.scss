@@ -1,0 +1,32 @@
+@mixin cool-effect ($event) {
+    & {
+        position: relative;
+    }
+
+    .cool-effect-trigger:#{$event} {
+        text-decoration: none;
+        color: $purple;
+    }
+
+    .cool-effect-trigger:#{$event} ~ .cool-effect-line  {
+        width: 100%;
+        transition: all 0.125s cubic-bezier(0.2, 0, 0.03, 1);
+    }
+
+    .cool-effect-line {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: block;
+        width: 0;
+        height: 3px;
+        background: $purple;
+        transition: all 0.125s cubic-bezier(0.2, 0, 0.03, 1);
+    }
+}
+
+@mixin horizontal-center {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%)
+}

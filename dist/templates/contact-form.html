@@ -1,0 +1,47 @@
+    <div ng-controller="addContactCtrl">
+        <div class="list-group-item">
+
+        <div class="form-group contact-form">
+
+            <p class="form-line">
+                <label for="name">First name: </label>
+                <input id="firstname" class="cool-effect-trigger" type="text" ng-model="currentContact.first_name">
+                <span class="cool-effect-line"></span>
+            </p>
+            <p class="form-line">
+                <label for="lastname">Last name: </label>
+                <input id="lastname" class="cool-effect-trigger" type="text" ng-model="currentContact.last_name">
+                <span class="cool-effect-line"></span>
+            </p>
+            <p class="form-line">
+                <label for="email">Email:</label>
+                <input id="email" class="cool-effect-trigger" type="text" ng-model="currentContact.email">
+                <span class="cool-effect-line"></span>
+            </p>
+            <p class="form-line">
+                <label for="phone">Gender:</label>
+                <input id="gender" class="cool-effect-trigger" type="text" ng-model="currentContact.gender">
+                <span class="cool-effect-line"></span>
+            </p>
+            <p class="form-line">
+                <label for="slogan">Slogan:</label>
+                <textarea class="cool-effect-trigger" id="slogan" rows="3" ng-model="currentContact.slogan"></textarea>
+                <span class="cool-effect-line"></span>
+            </p>
+        </div>
+
+        <div class="contact-actions">
+            <div>
+                <a class="cool-effect-trigger" ng-if="path === '/add' " ng-href="#/contact-info/{{ contacts.length - 1 }}" ng-click="addContact()">Add</a>
+                <span classs="cool-effect-line"></span>
+            </div>
+            <div>
+                <a class="cool-effect-trigger" ng-if="path !== '/add'" ng-href="#/contact-info/{{index}}">Save Edits</a>
+                <span classs="cool-effect-line"></span>
+            </div>
+            <div>
+                <a class="cool-effect-trigger" href="#/">Cancel</a>
+                <span classs="cool-effect-line"></span>
+            </div>
+        </div>
+    </div>
